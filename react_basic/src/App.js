@@ -1,6 +1,9 @@
 import './App.css';
+import {Job} from './Job';
+import {planets} from './Planets';
 
 function App() {
+
   return (
     <div className="App">
       <div className="Components">
@@ -9,18 +12,19 @@ function App() {
         <Job salary={12000} position="Junior SDE" company="Google"/>
         <Job salary={10000} position="Project Manager" company="Netflix"/>
       </div>
+
+      <div className="Ternary">
+        <h1> Ternary Operators, Lists, CSS Examples</h1>
+        {planets.map(
+          (planet, key) => (planet.isGasPlanet && <h6> {planet.name} </h6>)
+        )}
+      </div>
+
+      <div className="States">
+        
+      </div>
     </div>
   );
-}
-
-const Job = (props) => {
-  return(
-    <div>
-      <h6> {props.salary} </h6>
-      <h6> {props.position} </h6>
-      <h6> {props.company} </h6>
-    </div>
-  )
 }
 
 export default App;
