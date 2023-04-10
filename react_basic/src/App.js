@@ -1,8 +1,20 @@
 import './App.css';
-import {Job} from './Job';
-import {planets} from './Planets';
+import { useState } from "react";
+import {Job, planets, age, isGreen} from './Job';
+
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const increase = () => {
+    setCount(count + 1);
+  };
+  const decrease = () => {
+    setCount(count - 1);
+  };
+  const setToZero = () => {
+    setCount(0);
+  };
 
   return (
     <div className="App">
@@ -13,15 +25,30 @@ function App() {
         <Job salary={10000} position="Project Manager" company="Netflix"/>
       </div>
 
-      <div className="Ternary">
+      <div className="Ternary-Lists">
         <h1> Ternary Operators, Lists, CSS Examples</h1>
-        {planets.map(
-          (planet, key) => (planet.isGasPlanet && <h6> {planet.name} </h6>)
-        )}
+        <div className="Lists">
+          {planets.map(
+            (planet, key) => (planet.isGasPlanet && <h6> {planet.name} </h6>)
+          )}
+        </div>
+        <div className="Ternary">
+          {age >= 18 ? <h6> OVER AGE </h6> : <h6> UNDER AGE </h6>}
+          {/* 
+            CSS is different on JSX files
+            ? : "if-else statements" && "if statements"
+          */}
+          <h6 style={{color: isGreen ? "green" : "red", backgroundColor: "gray"}}> THIS HAS COLOR </h6>
+        </div>
       </div>
 
-      <div className="States">
-        
+      <div class="States">
+        <h1> States, useState Hook</h1>
+        <button onClick={increase}>Increase</button>
+        <button onClick={decrease}>Decrease</button>
+        <button onClick={setToZero}>Set to Zero</button>
+
+        {count}
       </div>
     </div>
   );

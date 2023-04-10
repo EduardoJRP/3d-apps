@@ -1,3 +1,4 @@
+{/* Based for the components div */}
 export const Job = (props) => {
     return(
       <div>
@@ -7,3 +8,15 @@ export const Job = (props) => {
       </div>
     )
   }
+
+{/* Based for the Ternary-List div */}
+export const planets = [
+  { name: "Mars", isGasPlanet: false },
+  { name: "Earth", isGasPlanet: false },
+  { name: "Venus", isGasPlanet: false },
+  { name: "Jupiter", isGasPlanet: true },
+  { name: "Neptune", isGasPlanet: true },
+  { name: "Uranus", isGasPlanet: true },
+];
+export const age = 17;
+export const isGreen = true;
