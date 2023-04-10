@@ -20,3 +20,13 @@ export const planets = [
 ];
 export const age = 17;
 export const isGreen = true;
+
+{/* Based for the CRUD dvi */}
+export const Task = (props) => {
+  return (
+    <div>
+      <h5>{props.taskName}</h5>
+      <button onClick={() => props.deleteTask(props.id)}>X</button>
+    </div>
+  );
+};
