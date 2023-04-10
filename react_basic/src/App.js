@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from "react";
-import {Job, planets, age, isGreen} from './Job';
+import {Job, planets, age, isGreen} from './Functions';
 
 
 function App() {
