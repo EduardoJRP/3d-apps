@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from "react";
-import {Task} from './sections/Functions';
+import {planets, age, isGreen, Task} from './sections/Functions';
 import {Components} from './sections/components'
 import { TernaryLists } from './sections/ternary-lists';
 
