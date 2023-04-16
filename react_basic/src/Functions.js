@@ -24,9 +24,13 @@ export const isGreen = true;
 {/* Based for the CRUD dvi */}
 export const Task = (props) => {
   return (
-    <div>
+    <div
+      className="task"
+      style={{ backgroundColor: props.completed ? "green" : "white" }}
+    >
       <h5>{props.taskName}</h5>
       <button onClick={() => props.deleteTask(props.id)}>X</button>
+      <button onClick={() => props.completeTask(props.id)}> Complete </button>
     </div>
   );
 };
