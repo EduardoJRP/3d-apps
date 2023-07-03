@@ -1,7 +1,7 @@
-# Calculator using React
+# 3d Portfolio example
 
 ## Description
 
-In this project I worked with the following technologies, React, JavaScript, HTML, CSS, and Vite for the building of the app.
+In this project I worked with the following technologies, React, JavaScript, HTML, CSS, Vite, tailwind, and three.js for the building of the app.
 
-This is app is ready for the use of simple arithmatic operations, for example, adding, substracting, multiplying or dividing.
+This is app is for basic understanding of the management of three.js.
